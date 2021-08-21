@@ -1,0 +1,119 @@
+<div class="prof">
+  <div class="row">
+
+      <div class="col-lg-3"></div>
+    <div class="col-lg-6">  
+    <form class="" #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+      <div class="form">
+      <div class="col-md-7">
+        <label for="inputfname" class="form-label">First Name:</label>
+        <input type="text" #firstName="ngModel"   name="firstName" [(ngModel)]="userService.selectedUser.firstName" class="form-control" 
+        id="input" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !firstName.valid }">
+<div *ngIf ="signUpForm.submitted && !firstName.valid ">
+  <label class="validation-message" style="color: red;">This field is required.</label>
+</div>
+</div><br>
+
+ <div class="col-md-7">
+        <label for="inputmname" class="form-label">Middle Name:</label>
+        <input type="text"    name="middleName" class="form-control" id="input" #middleName="ngModel"   name="middleName" [(ngModel)]="userService.selectedUser.middleName" >
+      </div><br>
+      <div class="col-md-7">
+        <label for="inputlname" class="form-label">Last Name:</label>
+        <input type="text"   name="lastName"   class="form-control" id="input" #lastName="ngModel"   name="lastName" [(ngModel)]="userService.selectedUser.lastName" >
+      </div><br>
+      
+            <div class="col-md-7">
+              <label for="inputEmail4" class="form-label">Email:</label>
+              <input type="email"  #email="ngModel"  name="email" [(ngModel)]="userService.selectedUser.email" class="form-control" id="inputEmail"
+              required [pattern]="emailRegex" [ngClass]="{'invalid-textbox' :signUpForm.submitted && !email.valid}">
+              <div *ngIf ="signUpForm.submitted && email.errors ">
+                <label  *ngIf="email.errors.required" class="validation-message" style="color: red;">This field is required.</label>
+                <label  *ngIf="email.errors.pattern" class="validation-message" style="color: red;">Invalid email address.</label>
+              </div>
+             </div><br>
+
+
+            <div class="col-md-7">
+              <label for="inputPassword4" class="form-label">Password:</label>
+              <input type="password" #password="ngModel"    name="password" [(ngModel)]="userService.selectedUser.password" class="form-control" id="inputPassword"
+              minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid}">
+              <div *ngIf ="signUpForm.submitted && password.errors ">
+                <label  *ngIf="password.errors.required" class="validation-message" style="color: red;">This field is required.</label>
+                <label  *ngIf="password.errors.minlength" class="validation-message" style="color: red;">Enter atleast 4 characters.</label>
+              </div>
+
+            </div><br>
+            <div class="col-md-7">
+              <label for="inputPassword4" class="form-label"> Confirm Password:</label>
+              <input type="password"  #confirmPassword="ngModel"    name="confirmPassword" [(ngModel)]="userService.selectedUser.confirmPassword" class="form-control" id="inputPassword"
+              minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !confirmPassword.valid}">
+              <div *ngIf ="signUpForm.submitted && confirmPassword.errors ">
+                <label  *ngIf="confirmPassword.errors.required" class="validation-message" style="color: red;">This field is required.</label>
+                <label  *ngIf="confirmPassword.errors.minlength" class="validation-message" style="color: red;">Enter same characters as above.</label>
+              </div>
+            </div><br>
+
+
+            <div class="col-md-7">
+              <label for="inputno" class="form-label">Phone No:</label>
+              <input type="text"   #phoneNo="ngModel"  name="phoneNo" [(ngModel)]="userService.selectedUser.phoneNo" class="form-control" id="input"
+              required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !phoneNo.valid }">
+             <div *ngIf ="signUpForm.submitted && !phoneNo.valid ">
+             <label class="validation-message" style="color: red;">This field is required.</label>
+             </div>
+            </div>
+ 
+
+            <div class="col-7">
+              <label for="inputquali" class="form-label">Highest Qualification:</label>
+              <input type="text"  #highestQuali="ngModel"  name="highestQuali" [(ngModel)]="userService.selectedUser.highestQuali" class="form-control"   id="inputAddress" placeholder="Enter your highest qualification"
+              required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !highestQuali.valid }">
+             <div *ngIf ="signUpForm.submitted && !highestQuali.valid ">
+            <label class="validation-message" style="color: red;">This field is required.</label>
+           </div>
+            </div><br>
+
+
+            <div class="col-7">
+              <label for="inputquali" class="form-label">Institution Name:</label>
+              <input type="text"   #instiName="ngModel"  name="instiName" [(ngModel)]="userService.selectedUser.instiName"  class="form-control" id="inputAddress" placeholder=""
+              required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !instiName.valid }">
+           <div *ngIf ="signUpForm.submitted && !instiName.valid ">
+           <label class="validation-message" style="color: red;">This field is required.</label>
+          </div>
+            </div><br>
+              <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3"></div> 
+           <div class="col-md-6"> 
+            <button id="btn" name="" type="submit" class="btn btn-primary" >Sign Up</button> 
+             <!-- <input type="submit" value="Sign Up"  >  -->
+
+          </div>
+ 
+            <div class="col-md-3"></div> 
+
+            </form> 
+<!--success message-->
+            <div class="success" *ngIf="showSucessMessage" style="color: green;" >
+            Saved Successfully
+            </div> 
+
+            <!--Error message-->
+<div class="alert" *ngIf="serverErrorMessages" style="color: red;">
+  {{serverErrorMessages}}
+</div>
+
+            <br><br><br>
+        </div>  
+        <div class="col-lg-3"></div>
+      </div>
+</div>

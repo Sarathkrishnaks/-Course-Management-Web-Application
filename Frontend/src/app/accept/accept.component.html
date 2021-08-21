@@ -1,0 +1,48 @@
+<div class='card'>
+    <form (ngSubmit)="AddStudent()" class='bg-pic'>
+<div class='card-header'>
+ ADD ENROLL DETAILS
+</div>
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody>  
+          <tr>
+              <td> <label>Student Name</label></td>
+              <td><input type="text" name="stu_name" [(ngModel)]="studentItem.studentName"/></td>                  
+            </tr>   
+            <tr>
+                <td><label> Enrolled Course</label></td>
+                <td><input type="text" name="stu_course" [(ngModel)]="studentItem.enrolledCourse"/></td>                  
+              </tr>  
+              
+              <tr>
+                <td><label>Enroll Date</label></td>
+                <td><input type="text" name="stu_date" [(ngModel)]="studentItem.enrollDate"/></td>                  
+              </tr>  
+                
+              <tr>
+                <td> <label>Course Period</label></td>
+                <td><input type="text" name="stu_period" [(ngModel)]="studentItem.coursePeriod"/></td>                  
+              </tr>  
+              <tr>
+
+              <tr>
+                <td> <label>Course starRating</label></td>
+                <td><input type="text" name="stu_rating" [(ngModel)]="studentItem.starRating"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Institution Name </label></td>
+                <td><input type="text" name="stu_insti" [(ngModel)]="studentItem.instiName"/></td>                  
+              </tr>  
+              <tr>
+                <td></td>
+                <td ><input style="margin-left: 2cm;" type="submit" value="Submit" /></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div><br><br><br><br><br><br><br>
+</div>
+</form>
+</div>

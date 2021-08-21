@@ -1,0 +1,45 @@
+<div id="img"><br><br>
+    <h2 id="h2"><b>Notifications</b></h2><br>
+    <div class="row" style="border: solid whitesmoke;background-color: whitesmoke;margin-left: 1em;margin-right: 1em;">    
+      
+      <div class='card' id="img" >
+        <div class='card-header'>
+        </div>
+        
+        <div class='card-body' >            
+          <div class='table-responsive'>
+            <table class='table bg-pic'
+                  *ngIf = 'students && students.length' style="color: white;">
+              <thead>
+                <tr>
+                  
+                  <th>Student Name</th>
+                  <th>Enrolled Course</th>
+                  <th>Enroll Date</th>
+                  <th>Course Period</th>
+                  <th>5 Star Rating</th>
+                  <th>Institution Name</th>
+    
+                </tr>
+               
+              </thead>
+              <tbody>  
+                  <tr *ngFor='let student of students'>
+                      
+                      <td>{{ student.studentName|uppercase }}</td>
+                      <td>{{ student.enrolledCourse }}</td>
+                      <td>{{ student.enrollDate }}</td>
+                      <td>{{ student.coursePeriod}}</td>
+                      <td>{{ student.starRating }}</td>
+                      <td>{{ student.instiName }}</td>
+    
+                      
+                    </tr>              
+              </tbody>
+            </table><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          </div>
+        </div>
+      </div>
+
+
+        </div>

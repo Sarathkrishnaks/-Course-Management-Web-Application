@@ -1,0 +1,37 @@
+ .loginpage{
+    background-image: url("C:\Users\sarat\Downloads\CourseManagement (2)\CourseManagement\Frontend\images\pexels-abet-llacer-919734.jpg");
+      background-size: 100%;
+      background-size: cover;
+      
+      } 
+      h3{
+          margin-left: 20cm;
+          color: white;
+      }
+
+      #email{
+        color: white;
+        margin-left: 2cm;  
+  }
+      #pass{
+        color: white;
+        margin-left: 2cm;  
+
+    }
+    #check{
+        color: white;
+        margin-left: 2cm; 
+    }
+    .col-lg-6{
+        margin-left: 9cm;
+    }
+
+    .btn {         
+
+        margin-left: 6.5cm;
+    }
+
+     #align{
+         margin-left: 4.5cm;
+     }
+    

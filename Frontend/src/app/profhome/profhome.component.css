@@ -1,0 +1,37 @@
+ .stud{
+    background-image: url("C:\Users\sarat\Downloads\CourseManagement (2)\CourseManagement\Frontend\images\pexels-pixabay-414628.jpg");
+    background-size: cover;
+} 
+
+
+#cyber{
+    margin-left:.6cm;
+}
+#fsd{
+    margin-left:.6cm;
+
+}
+#data{
+    margin-left:.6cm;
+
+}
+#head{
+    margin-left: 1cm;
+    color: white;
+        
+}
+#noti{
+    margin-left: 35cm;
+}
+
+#add{
+    margin-left: 35cm;
+    }
+    
+    .btn{
+margin-left: 2cm;
+    }
+
+    .ali{
+align-items: center;
+    }

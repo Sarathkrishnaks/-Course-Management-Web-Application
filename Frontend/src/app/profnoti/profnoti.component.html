@@ -1,0 +1,46 @@
+<div class='card'>
+    <div class='card-header'>
+    </div>
+    
+    <div class='card-body'>            
+      <div class='table-responsive'><br>
+        <h3 style="margin-left: 15cm;">List Of Enrolled Students</h3>
+
+        <table class='table bg-pic'
+              *ngIf = 'students && students.length'>
+          <thead>
+            <tr>
+              
+              <th>Student Name</th>
+              <th>Enrolled Course</th>
+              <th>Enroll Date</th>
+              <th>Course Period</th>
+              <th>5 Star Rating</th>
+              <th>Institution Name</th>
+
+            </tr>
+           
+          </thead>
+          <tbody>  
+              <tr *ngFor='let student of students'>
+                  
+                  <td>{{ student.studentName|uppercase }}</td>
+                  <td>{{ student.enrolledCourse }}</td>
+                  <td>{{ student.enrollDate }}</td>
+                  <td>{{ student.coursePeriod}}</td>
+                  <td>{{ student.starRating }}</td>
+                  <td>{{ student.instiName }}</td>
+
+                  <!-- <td>
+                    <button class="btn btn-warning" style="cursor:pointer" (click)="editStudent(student)" style="margin-left: 20px;"> Edit</button>
+                  </td> -->
+                  <td>
+                    <button class="btn btn-danger" style="cursor:pointer" (click)="deleteStudent(student)"> Delete</button>
+                  </td>
+                </tr>              
+          </tbody>
+        </table><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </div>
+    </div>
+  </div>
+  

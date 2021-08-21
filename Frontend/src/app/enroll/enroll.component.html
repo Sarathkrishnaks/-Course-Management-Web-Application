@@ -1,0 +1,52 @@
+<div class="prof">
+    <div class="row">
+  
+        <div class="col-lg-3"></div>
+      <div class="col-lg-6">  
+      <form class="row g-3"  (ngSubmit)="AddEnroll()">
+        <div class="signup"><br>
+          <h3>Enrolling Form</h3></div>
+  <br><br>
+          <div class="form">
+        <div class="col-md-7">
+          <label for="inputfname" class="form-label">Name:</label>
+          <input type="text" class="form-control" name="e_nam" [(ngModel)]="enrollItem.name" id="input">
+        </div><br>
+         <div class="col-7">
+                <label for="inputquali" class="form-label">Name of Course:</label>
+                <input type="text" class="form-control" id="inputAddress" 
+                name="e_namofcour" [(ngModel)]="enrollItem.nameofCourse"placeholder="Enter your course">
+              </div><br>
+         <div class="col-md-7">
+                <label for="inputEmail4" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="inputEmail" name="e_email" [(ngModel)]="enrollItem.email">
+              </div><br>
+              <div class="col-md-7">
+                <label for="inputno" class="form-label">Phone No:</label>
+                <input type="number" class="form-control" id="input" name="e_ph" [(ngModel)]="enrollItem.phoneNo">
+              </div><br>
+               <div class="col-7">
+                <label for="inputquali" class="form-label">Institution Name:</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="" name="e_insti" [(ngModel)]="enrollItem.institutionName">
+              </div><br>
+                <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="label" for="gridCheck">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <button id="btn"type="submit" class="btn btn-primary">Submit</button>
+              </div> 
+              <div class="col-md-3"></div>
+  
+              </form>
+              <br><br><br>
+          </div>  
+          <div class="col-lg-3"></div>
+        </div>
+  </div>

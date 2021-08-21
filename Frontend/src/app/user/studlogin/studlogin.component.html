@@ -1,0 +1,47 @@
+<div class="loginpage"><br>
+<h3>Log in</h3>
+<div class="col-lg-3"></div>
+<br><br>
+<div class="col-lg-6">
+<form #signInForm="ngForm" (ngSubmit)="signInForm.valid && onSubmit(signInForm)">
+    <div class="row mb-3" id="email">
+      <label for="email" class="col-sm-2 col-form-label">Email</label>
+       <div class="col-sm-8">
+        <input type="text" class="form-control"  name="email" #email="ngModel" [(ngModel)]="model.email" placeholder="Email"
+        [pattern]="emailRegex" [ngClass]="{'invalid-textbox' :signInForm.submitted && !email.valid }" required>
+            <div *ngIf="signInForm.submitted && email.errors?.pattern">
+        <label class="validation-message"> Invalid email address.</label>
+            </div>
+      </div>
+    </div><br>
+    <div class="row mb-3" id="pass">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-5">
+        <input type="password" class="form-control" id="inputPassword3" name="password" #password="ngModel"
+        [(ngModel)]="model.password" placeholder="Password" required minlength="4" [ngClass]="{'invalid-textbox' :signInForm.submitted && !password.valid}">
+        <div *ngIf="signInForm.submitted && password.errors?.minlength">
+       <label class="validation-message">Minimum 4 characters.</label>
+        </div>
+
+      </div>
+    </div><br>
+    
+    <div class="row mb-3">
+      <div class="col-sm-10 offset-sm-2">
+        <div class="form-check" id="check">
+          <input class="form-check-input" type="checkbox" id="gridCheck1">
+          <label class="form-check-label" for="gridCheck1">
+            Check me out
+          </label>
+        </div>
+      </div>
+    </div><br>
+    <button type="submit" class="btn btn-primary"  >Log in</button>
+  </form>
+  <!-- Error messages -->
+  <div class="alert" *ngIf="serverErrorMessages"> 
+    {{serverErrorMessages}}
+  </div>
+  <br><br><br><br><br><br><br><br><br>
+  <div class="col-lg-3"></div></div>
+</div>

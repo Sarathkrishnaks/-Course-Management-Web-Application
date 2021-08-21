@@ -1,0 +1,22 @@
+<div class="add"><br>
+    <div class="row">    
+        <form  (ngSubmit)="AddCourse()"><br>
+            <h3><b style="font-family: 'Times New Roman', Times, serif;">Enter the Course Details</b></h3> 
+            <p><b><h5 id="h">(*Please fill out all the mandatory fields!!)</h5></b></p> <br><br>
+            <h5>
+            <label for="title" style="margin-right: 22em" >Title*</label> <br> 
+            <input type="text" class="form-control" style="width:25em;"  name="c_tit" [(ngModel)]="courseItem.title"> <br><br>
+              <label for="author" style="margin-right: 21em">Mentor*</label> <br>
+               <input type="text" class="form-control" style="width: 25em;"  name="c_men" [(ngModel)]="courseItem.mentor"> <br><br>
+              <label for="genre" style="margin-right: 21em;">Course Period*</label> <br>
+              <input type="text" class="form-control" style="width:25em;" name="c_cour" [(ngModel)]="courseItem.coursePeriod"> <br><br>
+              <label for="image"  style="margin-right: 21em;">Image*</label> <br> 
+              <input type="text"  class="form-control" style="width:25em;"  name="c_img" [(ngModel)]="courseItem.imageUrl"> <br><br><br>
+              <button type="submit"  class="btn" style="background-color: dodgerblue;color: white;">Add Course</button>
+            
+            </h5>
+        </form>
+      </div>
+    
+      <br>
+</div>

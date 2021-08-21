@@ -1,0 +1,34 @@
+.imag{
+ background-image: url("C:\Users\sarat\Downloads\CourseManagement (2)\CourseManagement\Frontend\images\pexels-pixabay-459654.jpg");
+  background-size: 100%; 
+  font-weight:100px;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    text-align: center;   
+    width:1518px; 
+    height:700px;
+
+}
+  
+.col{
+  color:red;
+}
+
+img{
+  width: 10cm;
+  height:6cm;
+
+}
+
+#margin{
+  margin-left: 1cm;
+}
+  button{
+width: 5cm;
+height:2cm;
+align-items: center; 
+color: coral; 
+margin-left: 10px;
+  }
+
+  

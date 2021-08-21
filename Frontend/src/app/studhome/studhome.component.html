@@ -1,0 +1,40 @@
+<div id="img">
+    <h3 id="head"><br>{{userDetails.firstName}}, We bring here the best courses for you!!</h3>
+    <h4 style="color: aqua; margin-left: 1cm;">Email: {{userDetails.email}}</h4>
+    <h3 id="noti"><form action="">
+      <button type="submit" class="btn btn-primary" style="background-color:darkcyan;" routerLink="/notifi">Notifications</button>
+      <button type="submit" class="btn btn-primary" style="background-color: darkcyan;color: white" routerLink="/enroll">Enroll Now !!</button>
+    
+    </form></h3> <br><br>
+    <div class="row"  *ngFor='let course of courses' style="border: 1px solid whitesmoke;background-color: whitesmoke;margin-top: 2em;margin-left: 1em;margin-right: 1em;">    
+      <br>
+      <div class="col-md-2 col-sm-3 text-center">
+        <a class="story-title" href="#">
+          <img  [src] = 'course.imageUrl'
+          [style.width.px] = 'imageWidth'
+          [style.height.px] = 'imageHeight'
+          [style.margin.px] = 'imageMargin'></a>
+  
+      </div>
+      <div class="col-md-10 col-sm-9" id="cyber">
+        <h4>Title:{{course.title}}</h4>
+        <div class="row">
+          <div class="col-xs-9">
+            <h4><span class="label label-default">Mentor:{{course.mentor}}</span></h4><h4>
+            <small style="font-family:courier,'new courier';" class="text-muted">{{course.coursePeriod}}•
+              </small>
+            </h4></div>
+            <br><br>
+            
+          <div class="col-xs-3"></div>
+        </div>
+      </div>
+    </div>
+    
+  
+    
+    
+
+
+
+  

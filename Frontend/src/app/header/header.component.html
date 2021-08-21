@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        
+        <img src="https://th.bing.com/th/id/OIP.Oc2IWc9R-fHQimelJNOXJQHaHa?w=180&h=180&c=7&o=5&dpr=1.25&pid=1.7">
+  
+        <div class="head">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/userprofile" *ngIf="_auth.loggedIn()" (click)="loggedUser()"  routerLinkActive="active">HOME</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/profhome" *ngIf="_auth.loggedIn()" (click)="loggedUser()" routerLinkActive="active">PROFESSOR</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/aboutus" *ngIf="_auth.loggedIn()" routerLinkActive="active">ABOUT US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contactus" tabindex="-1"  *ngIf="_auth.loggedIn()" routerLinkActive="active">CONTACT US</a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link"  tabindex="-1" aria-disabled="false"  *ngIf="_auth.loggedIn()" (click)="logoutUser()" routerLinkActive="active" >LOG OUT</a>
+        </li> 
+        <div class="login">
+        <li class="nav-item" >
+          <a class="nav-link"  routerLink="/studlogin" *ngIf="!_auth.loggedIn()" routerLinkActive="active">LOG-IN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  tabindex="-1"   routerLink="/proflogin"  *ngIf="!_auth.loggedIn()" routerLinkActive="active"> PROFESSOR LOG IN</a>
+        </li> 
+      </div>
+        </div>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        
+      </form>       
+       <button class="btn btn-outline-success my-2 my-sm-0" type="submit"  >Search</button></div>
+  </nav>
+      

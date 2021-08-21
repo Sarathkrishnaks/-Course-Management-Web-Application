@@ -1,0 +1,19 @@
+  .add{
+    background-image: url("C:\Users\sarat\Downloads\CourseManagement (2)\CourseManagement\Frontend\images\pexels-pixabay-50711.jpg");
+      background-size: 100%;
+      background-size: cover;
+}  
+h3{
+    margin-left: 1.5cm;
+}
+.btn{
+    margin-left: 4cm;
+}
+.row{
+    margin-left: 15cm;
+    margin-right: 2cm;
+}
+
+#h{
+    margin-left:  .5cm;
+}

@@ -1,0 +1,82 @@
+<div class="prof">
+    <div class="row">
+
+        <div class="col-lg-3"></div>
+      <div class="col-lg-6">  
+      <form class="row g-3" #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && AddProf(signUpForm)">
+        <div class="signup"><br>
+          <h3>Sign Up</h3></div>
+
+          <div class="form">
+
+        <div class="col-md-7">
+          <label for="inputfname" class="form-label">First Name:</label>
+          <input type="text"   [(ngModel)]="profItem.firstName" class="form-control" id="input"
+          #firstName="ngModel"   name="firstName"  class="form-control" 
+          id="input" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !firstName.valid }">
+  <div *ngIf ="signUpForm.submitted && !firstName.valid ">
+    <label class="validation-message" style="color: red;">This field is required.</label>
+  </div>>
+        </div><br>
+
+
+        <div class="col-md-7">
+          <label for="inputmname" class="form-label">Middle Name:</label>
+          <input type="text"   #middleName="ngModel"   name="middleName"  [(ngModel)]="profItem.middleName" class="form-control" id="input">
+        </div><br>
+
+
+        <div class="col-md-7">
+          <label for="inputlname" class="form-label">Last Name:</label>
+          <input type="text"  #lastName="ngModel"   name="lastName" [(ngModel)]="profItem.lastName" class="form-control" id="input">
+        </div><br>
+        
+              <div class="col-md-7">
+                <label for="inputEmail4" class="form-label">Email:</label>
+                <input type="email" [(ngModel)]="profItem.email" class="form-control" id="inputEmail"  #email="ngModel"  name="email" class="form-control" id="inputEmail"
+                required [pattern]="emailRegex" [ngClass]="{'invalid-textbox' :signUpForm.submitted && !email.valid}">
+                <div *ngIf ="signUpForm.submitted && email.errors ">
+                  <label  *ngIf="email.errors.required" class="validation-message" style="color: red;">This field is required.</label>
+                  <label  *ngIf="email.errors.pattern" class="validation-message" style="color: red;">Invalid email address.</label>
+                </div>
+              </div><br>
+             
+              <div class="col-md-7">
+                <label for="inputno" class="form-label">Phone No:</label>
+                <input type="number"  [(ngModel)]="profItem.phoneNo"  class="form-control" id="input"  #phoneNo="ngModel"  name="phoneNo" class="form-control" id="input"
+                required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !phoneNo.valid }">
+               <div *ngIf ="signUpForm.submitted && !phoneNo.valid ">
+               <label class="validation-message" style="color: red;">This field is required.</label>
+               </div>
+              </div>
+              <div class="col-7">
+                <label for="inputquali" class="form-label">Highest Qualification:</label>
+                <input type="text"  [(ngModel)] ="profItem.highestQuali" class="form-control" id="inputAddress" placeholder="Enter your highest qualification"  #highestQuali="ngModel"  
+                name="highestQuali" class="form-control"   id="inputAddress" placeholder="Enter your highest qualification"
+                required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !highestQuali.valid }">
+               <div *ngIf ="signUpForm.submitted && !highestQuali.valid ">
+              <label class="validation-message" style="color: red;">This field is required.</label>
+             </div>
+              </div><br>
+              
+                <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="label" for="gridCheck">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <button id="btn" name="" class="btn btn-primary"type="submit">Sign Up</button>
+              </div> 
+              <div class="col-md-3"></div>
+
+              </form>
+              <br><br><br>
+          </div>  
+          <div class="col-lg-3"></div>
+        </div>
+</div>

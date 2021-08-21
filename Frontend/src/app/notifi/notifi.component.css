@@ -1,0 +1,9 @@
+ #img{
+    background-image: url("C:\Users\sarat\Downloads\CourseManagement (2)\CourseManagement\Frontend\images\pexels-pixabay-373543.jpg");
+    background-size: 100%;
+    background-size: cover;
+} 
+#h2{
+    color: white;
+    margin-left: 2cm;
+}

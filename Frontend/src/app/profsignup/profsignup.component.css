@@ -1,0 +1,28 @@
+ .prof{
+    background-image: url("C:\Users\sarat\Downloads\CourseManagement (2)\CourseManagement\Frontend\images\pexels-luis-gomes-546819.jpg");
+      background-size: 100%;
+      padding-right: 1cm;
+      
+
+      } 
+
+      .form-label{
+        color: white;
+      }
+      .label{
+        color: white;
+      }
+      .signup{
+        color: white;
+        margin-left: 8cm;
+      }
+      .form{
+        margin-left: 4cm;
+      }
+      
+      .col-2{
+        margin-left:3cm;
+      }
+      #btn{
+        margin-left: 4cm;
+      }
